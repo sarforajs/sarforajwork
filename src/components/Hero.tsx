@@ -6,7 +6,7 @@ export const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-20 bg-gradient-to-br from-blue-50 to-white">
       <div className="max-w-6xl mx-auto text-center">
         <div className="mb-8">
-          <div className="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden border-4 border-blue-500 shadow-2xl">
+          <div className="w-64 h-64 mx-auto mb-8 rounded-full overflow-hidden border-4 border-blue-500 shadow-2xl">
             <img
               src="/lovable-uploads/aaf5ba4e-b8eb-4148-91fe-0bebe16b4468.png"
               alt="Sarforaj Shaikh"
