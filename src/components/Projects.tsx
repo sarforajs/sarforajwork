@@ -33,40 +33,40 @@ export const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 bg-gray-800/50">
+    <section id="projects" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16">Featured Projects</h2>
+        <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">Featured Projects</h2>
         
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-gray-800 rounded-lg p-8 hover:transform hover:scale-105 transition-all duration-300">
+            <div key={index} className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg hover:shadow-xl hover:transform hover:scale-105 transition-all duration-300">
               <div className="flex items-center gap-4 mb-6">
-                <div className="text-blue-400">
+                <div className="text-blue-600">
                   {project.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-white">{project.title}</h3>
+                <h3 className="text-2xl font-bold text-gray-900">{project.title}</h3>
               </div>
               
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-700 mb-6 leading-relaxed">
                 {project.description}
               </p>
               
               <div className="mb-6">
-                <h4 className="text-lg font-semibold mb-3 text-blue-400">Key Features:</h4>
+                <h4 className="text-lg font-semibold mb-3 text-blue-600">Key Features:</h4>
                 <ul className="space-y-2">
                   {project.features.map((feature, idx) => (
-                    <li key={idx} className="text-gray-300 text-sm">• {feature}</li>
+                    <li key={idx} className="text-gray-700 text-sm">• {feature}</li>
                   ))}
                 </ul>
               </div>
               
               <div className="mb-6">
-                <h4 className="text-lg font-semibold mb-3 text-blue-400">Technologies:</h4>
+                <h4 className="text-lg font-semibold mb-3 text-blue-600">Technologies:</h4>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full"
+                      className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full"
                     >
                       {tech}
                     </span>

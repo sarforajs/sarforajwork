@@ -42,14 +42,14 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4">
+    <section id="contact" className="py-20 px-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16">Get In Touch</h2>
+        <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">Get In Touch</h2>
         
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-blue-400">Let's Connect</h3>
-            <p className="text-gray-300 mb-8 leading-relaxed">
+            <h3 className="text-2xl font-bold mb-8 text-blue-600">Let's Connect</h3>
+            <p className="text-gray-700 mb-8 leading-relaxed">
               I'm always interested in new opportunities and exciting projects. 
               Whether you need DevOps expertise, backend development, or cloud infrastructure solutions, 
               I'd love to hear from you.
@@ -57,14 +57,14 @@ export const Contact = () => {
             
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-blue-400" />
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white">Email</h4>
+                  <h4 className="font-semibold text-gray-900">Email</h4>
                   <a 
                     href="mailto:sarfarojsshaikh098@gmail.com"
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-700 hover:text-blue-600 transition-colors"
                   >
                     sarfarojsshaikh098@gmail.com
                   </a>
@@ -72,14 +72,14 @@ export const Contact = () => {
               </div>
               
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-blue-400" />
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white">Phone</h4>
+                  <h4 className="font-semibold text-gray-900">Phone</h4>
                   <a 
                     href="tel:9325692110"
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-700 hover:text-blue-600 transition-colors"
                   >
                     +91 93256 92110
                   </a>
@@ -87,22 +87,22 @@ export const Contact = () => {
               </div>
               
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-blue-400" />
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white">Location</h4>
-                  <p className="text-gray-300">India</p>
+                  <h4 className="font-semibold text-gray-900">Location</h4>
+                  <p className="text-gray-700">India</p>
                 </div>
               </div>
             </div>
           </div>
           
-          <div className="bg-gray-800 rounded-lg p-8">
+          <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-md">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Name
                   </label>
                   <Input
@@ -112,12 +112,12 @@ export const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="bg-gray-700 border-gray-600 text-white focus:border-blue-400"
+                    className="bg-gray-50 border-gray-300 text-gray-900 focus:border-blue-500"
                     placeholder="Your Name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email
                   </label>
                   <Input
@@ -127,14 +127,14 @@ export const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-gray-700 border-gray-600 text-white focus:border-blue-400"
+                    className="bg-gray-50 border-gray-300 text-gray-900 focus:border-blue-500"
                     placeholder="your.email@example.com"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
                   Subject
                 </label>
                 <Input
@@ -144,13 +144,13 @@ export const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="bg-gray-700 border-gray-600 text-white focus:border-blue-400"
+                  className="bg-gray-50 border-gray-300 text-gray-900 focus:border-blue-500"
                   placeholder="What's this about?"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message
                 </label>
                 <Textarea
@@ -160,14 +160,14 @@ export const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="bg-gray-700 border-gray-600 text-white focus:border-blue-400"
+                  className="bg-gray-50 border-gray-300 text-gray-900 focus:border-blue-500"
                   placeholder="Tell me about your project or opportunity..."
                 />
               </div>
               
               <Button 
                 type="submit" 
-                className="w-full bg-blue-500 hover:bg-blue-600 text-white flex items-center justify-center gap-2"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center gap-2"
               >
                 <Send className="w-4 h-4" />
                 Send Message
