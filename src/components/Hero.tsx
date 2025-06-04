@@ -2,7 +2,10 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white px-4 text-center">
+    <section
+      id="hero"
+      className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white px-4 text-center"
+    >
       <img
         src="/lovable-uploads/aaf5ba4e-b8eb-4148-91fe-0bebe16b4468.png"
         alt="Sarforaj Shaikh"
