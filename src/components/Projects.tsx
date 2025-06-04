@@ -1,82 +1,43 @@
+import React from 'react';
 
-import { Github, Code, Settings } from "lucide-react";
+const projects = [
+  {
+    title: "Crypto File Encryptor",
+    description: "Encrypt/decrypt files using AES encryption in Spring Boot. Secured with password hashing and Dockerized for deployment.",
+    tech: "Spring Boot, AES, Docker, Jenkins, SonarQube",
+    github: "https://github.com/sarforajs/crypto",
+    live: "",
+  },
+  {
+    title: "DevOps Portfolio Site",
+    description: "My personal portfolio built with Vite, Tailwind, and custom React components.",
+    tech: "React, Vite, Tailwind CSS",
+    github: "https://github.com/sarforajs/sarforajwork",
+    live: "https://sarforajwork.online",
+  },
+];
 
-export const Projects = () => {
-  const projects = [
-    {
-      title: "Cryptography Web Application",
-      description: "A comprehensive Spring Boot application featuring file encryption and decryption using PBKDF2 + AES encryption. Built with a complete CI/CD pipeline including Docker, Jenkins, SonarQube, Trivy, and GitHub Actions.",
-      technologies: ["Spring Boot", "Java", "Docker", "Jenkins", "AWS EC2", "SonarQube", "Trivy", "GitHub Actions"],
-      features: [
-        "PBKDF2 + AES encryption implementation",
-        "Complete CI/CD pipeline automation",
-        "AWS EC2 deployment",
-        "Security scanning with Trivy",
-        "Code quality analysis with SonarQube",
-        "Future Kubernetes and Terraform integration planned"
-      ],
-      icon: <Settings className="w-8 h-8" />
-    },
-    {
-      title: "CRM Web Application",
-      description: "A full-stack Customer Relationship Management system developed for an NGO during engineering studies. Features comprehensive contact management and communication tracking capabilities.",
-      technologies: ["Backend Development", "Frontend Integration", "Database Management", "Web Technologies"],
-      features: [
-        "Contact management system",
-        "Communication tracking",
-        "User-friendly interface",
-        "Database integration",
-        "NGO-specific workflow optimization"
-      ],
-      icon: <Code className="w-8 h-8" />
-    }
-  ];
-
+const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">Featured Projects</h2>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div key={index} className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg hover:shadow-xl hover:transform hover:scale-105 transition-all duration-300">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="text-blue-600">
-                  {project.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">{project.title}</h3>
-              </div>
-              
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                {project.description}
-              </p>
-              
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold mb-3 text-blue-600">Key Features:</h4>
-                <ul className="space-y-2">
-                  {project.features.map((feature, idx) => (
-                    <li key={idx} className="text-gray-700 text-sm">• {feature}</li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold mb-3 text-blue-600">Technologies:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+    <section id="projects" className="py-20 bg-gray-100 text-gray-900 px-4">
+      <h2 className="text-3xl font-bold text-center mb-10">Projects</h2>
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+        {projects.map((project, index) => (
+          <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+            <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
+            <p className="text-gray-700 mb-2">{project.description}</p>
+            <p className="text-sm text-gray-500 mb-4">Tech: {project.tech}</p>
+            <div className="flex gap-4">
+              <a href={project.github} className="text-blue-600 hover:underline" target="_blank">GitHub</a>
+              {project.live && (
+                <a href={project.live} className="text-blue-600 hover:underline" target="_blank">Live</a>
+              )}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
+
+export default Projects;
