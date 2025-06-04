@@ -1,5 +1,4 @@
-
-export const About = () => {
+const About = () => {
   return (
     <section id="about" className="py-20 px-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
@@ -57,3 +56,5 @@ export const About = () => {
     </section>
   );
 };
+
+export default About;
