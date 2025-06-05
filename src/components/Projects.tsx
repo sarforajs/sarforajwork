@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Code, Settings } from "lucide-react";
+import { Code, Settings } from "lucide-react";
 
 const Projects = () => {
   const projects = [
@@ -92,4 +92,22 @@ const Projects = () => {
                   Technologies:
                 </h4>
                 <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, idx) =>
+                  {project.technologies.map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </section>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
