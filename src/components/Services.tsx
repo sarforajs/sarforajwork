@@ -1,7 +1,6 @@
-
 import { Server, Settings, Code, Github } from "lucide-react";
 
-export const Services = () => {
+const Services = () => {
   const services = [
     {
       icon: <Settings className="w-12 h-12" />,
@@ -36,7 +35,7 @@ export const Services = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-lg p-6 text-center border border-gray-200 shadow-md hover:shadow-lg hover:transform hover:translateY(-5px) transition-all duration-300">
+            <div key={index} className="bg-white rounded-lg p-6 text-center border border-gray-200 shadow-md hover:shadow-lg hover:transform hover:translate-y-[-5px] transition-all duration-300">
               <div className="text-blue-600 mb-4 flex justify-center">
                 {service.icon}
               </div>
@@ -74,3 +73,5 @@ export const Services = () => {
     </section>
   );
 };
+
+export default Services;
