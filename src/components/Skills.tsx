@@ -1,5 +1,4 @@
-
-export const Skills = () => {
+const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
@@ -80,3 +79,5 @@ export const Skills = () => {
     </section>
   );
 };
+
+export default Skills;
