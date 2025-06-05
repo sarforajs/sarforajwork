@@ -1,7 +1,7 @@
 import React from "react";
 import { Github, Code, Settings } from "lucide-react";
 
-export const Projects = () => {
+const Projects = () => {
   const projects = [
     {
       title: "Cryptography Web Application",
@@ -92,20 +92,4 @@ export const Projects = () => {
                   Technologies:
                 </h4>
                 <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </section>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+                  {project.technologies.map((tech, idx) =>
